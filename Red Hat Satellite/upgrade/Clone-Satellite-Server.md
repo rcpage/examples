@@ -28,7 +28,7 @@ cd satellite-clone
 cp satellite-clone-vars.sample.yml satellite-clone-vars.yml
 
 ## Unarchive katello-backup and rename
-tar -xvfz katello-backup.tar.gz
+tar -xvzf katello-backup.tar.gz
 mv katello-backup-* /backup
 
 ## Run playbook on fresh RHEL install
