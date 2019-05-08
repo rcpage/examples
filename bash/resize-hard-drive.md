@@ -1,3 +1,4 @@
+```bash
 df -h
 fdisk -l
 fdisk /dev/sda
@@ -10,3 +11,4 @@ partprobe
 vgextend rhel /dev/sda3
 lvextend -l+100%FREE -r /dev/mapper/rhel-root
 df -h
+```
