@@ -44,13 +44,15 @@ rpm -e puppetserver -y
 yum install puppetserver -y
 systemctl restart puppetserver
 
-
-# may run into disk performance failure
-# we override since running on a VM
+## may run into disk performance failure, we override since running on a VM
 foreman-maintain upgrade run --target-version 6.4 --whitelist="disk-performance"
 
+## If using a BASH shell, after a successful or failed upgrade, enter:
 hash -d foreman-maintain service 2> /dev/null
+
 foreman-maintain service restart
+
+## If you have the OpenSCAP plug-in installed, but do not have the default OpenSCAP content available, enter the following command:
 foreman-rake foreman_openscap:bulk_upload:default
 
 ```
