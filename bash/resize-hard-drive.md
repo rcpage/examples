@@ -3,9 +3,9 @@ df -h
 fdisk -l
 fdisk /dev/sda
 # enter following commands to partition extra space
-# print
+# p -> print drive space
 # n -> new (use defaults)
-# t -> use defaults and 8e for Linux
+# t -> use defaults and 8e hex code for Linux LVM
 # w -> write settings
 partprobe
 vgextend rhel /dev/sda3
