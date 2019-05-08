@@ -39,6 +39,11 @@ subscription-manager repos \
 ## Upgrade Puppet:
 satellite-installer --upgrade-puppet
 
+## may need to re-install puppetserver after running above command 
+rpm -e puppetserver -y
+yum install puppetserver -y
+systemctl restart puppetserver
+
 
 # may run into disk performance failure
 # we override since running on a VM
