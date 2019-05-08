@@ -1,11 +1,15 @@
 ## Preparation
 
-Take katello-backup snapshot of production server. See https://github.com/RedHatSatellite/satellite-clone
-
+Take katello-backup snapshot of production server.
 
 ```sh
+
+katello-service stop
+katello-backup --skip-pulp-content /path/to/katello-backup/
+katello-service start
+
 ## copy backup file to host
-scp katello-backup.tar.gz [host-ip]:
+scp /path/to/katello-backup/katello-backup.tar.gz [host-ip]:
 
 ## ssh to host
 subscription-manager register
