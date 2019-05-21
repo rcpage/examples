@@ -1,3 +1,4 @@
+# Extend /dev/sda
 ```bash
 df -h
 fdisk -l
@@ -9,6 +10,14 @@ fdisk /dev/sda
 # w -> write settings
 partprobe
 vgextend rhel /dev/sda3
+lvextend -l+100%FREE -r /dev/mapper/rhel-root
+df -h
+```
+
+# Extend /dev/sdb
+```bash
+fdisk -l
+vgextend rhel /dev/sdb
 lvextend -l+100%FREE -r /dev/mapper/rhel-root
 df -h
 ```
