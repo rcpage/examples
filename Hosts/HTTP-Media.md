@@ -3,6 +3,8 @@
 dnf install httpd
 systemctl enable httpd
 systemctl start httpd
+firewall-cmd --add-service=http --permanent
+firewall-cmd --reload
 ```
 ### Download Fedora ISO to HTTP host
 ```sh
