@@ -29,8 +29,11 @@ cat <<EOF | sudo tee /var/named/example.com.zone
   86400
 )
 
-@      IN NS ns1
-ns1 IN A  3.2.1.12
+@      IN NS dns
+dns IN A  3.2.1.12
+media IN A 3.2.1.14
+dhcp IN A 3.2.1.14
+tftp IN A 3.2.1.17
 EOF
 ```
 ### Append zone file to /etc/named.conf
@@ -66,5 +69,5 @@ nameserver 3.2.1.1
 
 ### Ping ns1.example.com
 ```sh
-ping ns1.example.com
+ping dns.example.com
 ```
