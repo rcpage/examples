@@ -7,6 +7,7 @@ firewall-cmd --reload
 ```
 
 ## PXE Boot DHCP Config
+- Host: 3.2.1.14
 - Config: /etc/dhcp/dhcpd.conf
 - Subnet: 3.2.1.0/24
 - DHCP Range: 3.2.1.200-240
