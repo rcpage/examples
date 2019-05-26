@@ -20,8 +20,8 @@ timeout 600
 label server
 menu label ^Install Fedora 29 x86_64
 menu default
-kernel http://3.2.1.14/media/fedora/29/images/pxeboot/vmlinuz
-append initrd=http://3.2.1.14/media/fedora/29/images/pxeboot/initrd.img inst.repo=http://3.2.1.14/media/fedora/29
+kernel http://media.example.com/media/fedora/29/images/pxeboot/vmlinuz
+append initrd=http://media.example.com/media/fedora/29/images/pxeboot/initrd.img inst.repo=http://media.example.com/media/fedora/29
 
 label local
 menu label Boot from ^local drive
