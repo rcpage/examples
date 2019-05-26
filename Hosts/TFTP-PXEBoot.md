@@ -3,6 +3,9 @@
 dnf install tftp-server syslinux
 ```
 ## Copy syslinux files to TFTP directory
+
+Note: HTTP media server hosts vmlinuz and initrd.img files.
+
 ```sh
 cd /var/lib/tftpboot
 cp /usr/lib/syslinux/pxelinux.0 .
