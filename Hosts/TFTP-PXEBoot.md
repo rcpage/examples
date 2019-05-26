@@ -24,3 +24,9 @@ label local
 menu label Boot from ^local drive
 localboot 0xffff
 ```
+
+## Start TFTP Service
+```sh
+systemctl start xinetd
+chkconfig tftp on
+```
