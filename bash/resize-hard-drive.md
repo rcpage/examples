@@ -1,5 +1,6 @@
 # Extend /dev/sda
 ```bash
+lvs
 df -h
 fdisk -l
 fdisk /dev/sda
@@ -16,6 +17,7 @@ df -h
 
 # Extend /dev/sdb
 ```bash
+lvs
 fdisk -l
 vgextend rhel /dev/sdb
 lvextend -l+100%FREE -r /dev/mapper/rhel-root
